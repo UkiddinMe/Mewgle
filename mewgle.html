@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script>
+            function show(shown, hidden) {
+              document.getElementById(shown).style.display='block';
+              document.getElementById(hidden).style.display='none';
+              return false;
+            }
+        </script>
+        <title>Mewgle</title>
+        <style>
+            body,
+            a {
+                font-family: arial, sans-serif
+            } nav {
+                text-align: right;
+            } input.inser {
+                border-bottom-left-radius:24px;
+                border-bottom-right-radius: 24px;
+                border-top-left-radius: 24px;
+                border-top-right-radius: 24px
+            } a.navlink {
+                margin-right: 20px;
+            } a.navlink:hover {
+                text-decoration: underline;
+            } form.cenform {
+                text-align: center; margin-top: 300px;
+            } #myVideo {
+                position: fixed;
+                right: 0;
+                bottom: 0;
+                min-width: 100%;
+                min-height: 100%;
+                background: url(loop-hd.jpg) no-repeat;
+                background-size: cover;
+                display: block;
+                z-index: -100
+                }
+
+                /* Add some content at the bottom of the video/page */
+                .content {
+                position: fixed;
+                bottom: 0;
+                background: rgba(0, 0, 0, 0.5);
+                color: #f1f1f1;
+                width: 100%;
+                padding: 20px;
+                }
+
+                /* Style the button used to pause/play the video */
+                #myBtn {
+                width: 200px;
+                font-size: 18px;
+                padding: 10px;
+                border: none;
+                background: #000;
+                color: #fff;
+                cursor: pointer;
+                }
+
+                #myBtn:hover {
+                background: #ddd;
+                color: black;
+                }
+        </style>
+    </head>
+    <body>
+    <video autoplay muted loop id="myVideo">
+        <source src="final_5fa9d325ecb1d800a8fe5cfa_159168.mp4" type="video/mp4">
+    </video>
+    <audio loop autoplay>
+        <source src="ora esatta musica.mp3" type="audio/filetype">
+    </audio>
+    <audio src="ora esatta musica.mp3" controls>	
+        <embed
+            src="ora esatta musica.mp3"
+            width="300"
+            height="90"
+            loop="true"
+            autostart="true">
+    </audio>
+        <div id="Page1" style="z-index: 100">
+            <nav>
+                <a class="navlink" onclick="return show('Image','Page1');">Image Search</a>
+                <a class="navlink" onclick="return show('Adv','Page1');">Advanced Search</a>
+            </nav>
+            <div>
+                <form class=cenform action="https://google.com/search">
+                    <div>
+                        <input class="inser" type="text" name="q">
+                    </div>
+                    <div style="margin-top: 14px;">
+                        <center>
+                            <input type="submit" value="Google Search">
+                            <input class="RNmpXc" value="Mi sento fortunato" aria-label="Mi sento fortunato" name="btnI" type="submit" jsaction="sf.lck" data-ved="0ahUKEwj8iaC8q7LuAhViBWMBHYnpCtkQ19QECA4">
+                        </center>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div id="Image" style="display:none">
+            <nav>
+                <a class="navlink" onclick="return show('Page1','Image');">Web Search</a>
+            </nav>
+            <div>
+                <!--class="tsf"    style="overflow:visible" id="tsf" data-submitfalse="q" method="GET" name="f" role="search"-->
+                <form class=cenform action="https://www.google.it/search">
+                    <div>
+                        <input class="inser" type="text" name="q">
+                        <input name="tbm" value="isch" type="hidden">
+                        <div style="margin-top: 14px;">
+                            <center>
+                                <input type="submit" value="Image Search">
+                            </center>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div id="Adv" style="display:none">
+        <style>
+            div.cell {
+            height: 30px;
+            display: table-cell;
+            vertical-align: middle
+        }   form.bigfor {
+            margin-top: 80px;
+            margin-left: 60px;
+            padding-top: 40px;
+            padding-left: 20px;
+        }   input.AdvBut {
+            background: #357ae8;
+            border: 1px solid #2f5bb7;
+            border-top: 1px solid #2f5bb7
+        }
+        </style>
+            <nav>
+                <a class="navlink" onclick="return show('Page1','Adv');">Web Search</a>
+            </nav>
+            <div>
+                <form class=bigfor action="https://google.com/search">
+                    <div class="cell">
+                        <div>
+                            <span>Find pages with...</span>
+                        </div>
+                    <div> &nbsp; </div>
+                    </div>
+                    <div >
+                        <div>
+                            <div class="cell">
+                                <label>all these words:</label>
+                            </div>
+                            <div>
+                                <input class="inser" type="text" name="as_q">
+                            </div>
+                        </div>
+                        <div>
+                            <div class="cell">
+                                <label>this exact word or phrase:</label>
+                            </div>
+                            <div>
+                                <input class="inser" type="text" name="as_epq">
+                            </div>
+                        </div>
+                        <div>
+                            <div class="cell">
+                                <label>any of these words:</label>
+                            </div>
+                            <div>
+                                <input class="inser" type="text" name="as_oq">
+                            </div>
+                        </div>
+                        <div>
+                            <div class="cell">
+                                <label>none of these words:</label>
+                            </div>
+                            <div>
+                                <input class="inser" type="text" name="as_eq">
+                            </div>
+                        </div>
+                    </div>
+                    <div style="margin-top: 14px;">
+                        <center>
+                            <input class=AdvBut type="submit" value="Search">
+                        </center>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>
