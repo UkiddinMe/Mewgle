@@ -2,6 +2,8 @@
 <html lang="en">
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="cat-128.png">
+        <title>Mewgle</title>
         <script>
             function show(shown, hidden) {
               document.getElementById(shown).style.display='block';
@@ -9,7 +11,6 @@
               return false;
             }
         </script>
-        <title>Mewgle</title>
         <style>
             body,
             a {
@@ -20,7 +21,12 @@
                 border-bottom-left-radius:24px;
                 border-bottom-right-radius: 24px;
                 border-top-left-radius: 24px;
-                border-top-right-radius: 24px
+                border-top-right-radius: 24px;
+                height: 32px;
+                width: 482px;
+            } input.inser:hover {
+                background-color: #fff;
+                box-shadow: 0 4px 6px rgba(32, 33, 36, .28);
             } a.navlink {
                 margin-right: 20px;
             } a.navlink:hover {
@@ -28,14 +34,14 @@
             } form.cenform {
                 text-align: center; margin-top: 300px;
             } #myVideo {
-                position: fixed;
-                left: 0;
+                position:fixed;
+                left: 0px;
                 top: 35px;
                 right: 0;
                 bottom: 0;
                 min-width: 100%;
                 min-height: 100%;
-                background: url(loop-hd.jpg) no-repeat;
+                background: no-repeat;
                 background-size: cover;
                 display: block;
                 z-index: -100
@@ -43,6 +49,13 @@
                 position:fixed;
                 bottom:10px;
                 right:10px
+            } img.logo {
+                max-height:100%;
+                max-width:100%;
+                object-fit:contain;
+                object-position:center bottom;
+                width:auto;
+                margin-bottom: 14px;
             }
         </style>
     </head>
@@ -57,12 +70,13 @@
             </nav>
             <div>
                 <form class=cenform action="https://google.com/search">
+                    <img class="logo" alt="Mewgle" height="92" src="Mewgle.png" width="272" data-atf="1">
                     <div>
                         <input class="inser" type="text" name="q">
                     </div>
                     <div style="margin-top: 14px;">
                         <center>
-                            <input type="submit" value="Google Search">
+                            <input type="submit" value="Cerca con Mewgle">
                             <input class="RNmpXc" value="Mi sento fortunato" aria-label="Mi sento fortunato" name="btnI" type="submit" jsaction="sf.lck" data-ved="0ahUKEwj8iaC8q7LuAhViBWMBHYnpCtkQ19QECA4">
                         </center>
                     </div>
@@ -74,8 +88,8 @@
                 <a class="navlink" onclick="return show('Page1','Image');">Web Search</a>
             </nav>
             <div>
-                <!--class="tsf"    style="overflow:visible" id="tsf" data-submitfalse="q" method="GET" name="f" role="search"-->
                 <form class=cenform action="https://www.google.it/search">
+                    <img class="logo" alt="Mewgle" height="92" src="Mewgle.png" width="272" data-atf="1">
                     <div>
                         <input class="inser" type="text" name="q">
                         <input name="tbm" value="isch" type="hidden">
@@ -158,14 +172,14 @@
                 </form>
             </div>
         </div>
-    <div class="lowbar">
-        <audio class=musica id='themeSong' src="ora esatta musica.wav" autoPlay loop controls
-            >
-        </audio>
-        <script>
-            var aud = document.getElementById("themeSong");
-            aud.volume = 0.75;
-        </script>
-    </div>
+        <div class="lowbar">
+            <audio class=musica id='themeSong' src="ora esatta musica.wav" autoPlay loop controls
+                >
+            </audio>
+            <script>
+                var aud = document.getElementById("themeSong");
+                aud.volume = 0.75;
+            </script>
+        </div>
     </body>
 </html>
