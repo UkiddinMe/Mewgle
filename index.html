@@ -17,6 +17,23 @@
                 font-family: arial, sans-serif
             } nav {
                 text-align: right;
+            } .item {
+                display: flex;
+                flex-shrink: 0;
+                box-sizing: border-box;
+            } .top {
+                height:60px;
+            } .logo {
+                min-height: 150px;
+                max-height: 290px;
+                height: calc(100% - 560px);
+                flex-direction: column;
+                align-items: center;
+            } .search {
+                flex-direction: column;
+
+            } .lowbar {
+
             } input.inser {
                 border-bottom-left-radius:24px;
                 border-bottom-right-radius: 24px;
@@ -32,7 +49,7 @@
             } a.navlink:hover {
                 text-decoration: underline;
             } form.cenform {
-                text-align: center; margin-top: 300px;
+                text-align: center;
             } #myVideo {
                 position:fixed;
                 left: 0px;
@@ -50,12 +67,10 @@
                 bottom:10px;
                 right:10px
             } img.logo {
-                max-height:100%;
-                max-width:100%;
                 object-fit:contain;
                 object-position:center bottom;
-                width:auto;
                 margin-bottom: 14px;
+                margin-top: auto;
             }
         </style>
     </head>
@@ -63,14 +78,16 @@
     <video autoplay muted loop id="myVideo">
         <source src="final_5fa9d325ecb1d800a8fe5cfa_159168.mp4" type="video/mp4">
     </video>
-        <div id="Page1" style="z-index: 100">
+        <div class="page" id="Page1" style="z-index: 100">
             <nav>
                 <a class="navlink" onclick="return show('Image','Page1');">Image Search</a>
                 <a class="navlink" onclick="return show('Adv','Page1');">Advanced Search</a>
             </nav>
-            <div>
+            <div class="item logo">
+                <img class="logo" alt="Mewgle" src="Mewgle.png" height="92" width="272">
+            </div>
+            <div class="item search">
                 <form class=cenform action="https://google.com/search">
-                    <img class="logo" alt="Mewgle" height="92" src="Mewgle.png" width="272" data-atf="1">
                     <div>
                         <input class="inser" type="text" name="q">
                     </div>
@@ -83,13 +100,15 @@
                 </form>
             </div>
         </div>
-        <div id="Image" style="display:none">
+        <div class="page" id="Image" style="display:none">
             <nav>
                 <a class="navlink" onclick="return show('Page1','Image');">Web Search</a>
             </nav>
-            <div>
+            <div class="item logo">
+                <img class="logo" alt="Mewgle" src="Mewgle.png" height="92" width="272" data-atf="1">
+            </div>
+            <div class="item search">
                 <form class=cenform action="https://www.google.it/search">
-                    <img class="logo" alt="Mewgle" height="92" src="Mewgle.png" width="272" data-atf="1">
                     <div>
                         <input class="inser" type="text" name="q">
                         <input name="tbm" value="isch" type="hidden">
@@ -102,7 +121,7 @@
                 </form>
             </div>
         </div>
-        <div id="Adv" style="display:none">
+        <div class="page" id="Adv" style="display:none">
         <style>
             div.cell {
             height: 30px;
@@ -172,8 +191,8 @@
                 </form>
             </div>
         </div>
-        <div class="lowbar">
-            <audio class=musica id='themeSong' src="ora esatta musica.wav" autoPlay loop controls
+        <div class="item lowbar">
+            <audio class=musica id='themeSong' src="ora esatta musica.wav"  loop controls
                 >
             </audio>
             <script>
