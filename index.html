@@ -77,6 +77,16 @@
             } .button:hover {
                 background-color: #fff;
                 box-shadow: 0 4px 6px rgba(32, 33, 36, .28);
+            } .logo-subtext {
+                color: #4285f4;
+                font: 16px/16px roboto-regular, arial, sans-serif;
+                left: 100px;
+                position: relative;
+                top: -35px;
+                white-space: nowrap;
+            } .imgform {
+                position: relative;
+                top: -16px;
             }
         </style>
     </head>
@@ -110,8 +120,13 @@
             </nav>
             <div>
                 <form class=cenform action="https://www.google.it/search">
-                    <img class="logo" alt="Mewgle" height="92" src="Mewgle.png" width="272" data-atf="1">
                     <div>
+                        <img class="logo" alt="Mewgle" height="92" src="Mewgle.png" width="272" data-atf="1">
+                        <div class="logo-subtext">
+                            <span>Images</span>
+                        </div>
+                    </div>
+                    <div class="imgform">
                         <input class="inser" type="text" name="q">
                         <input name="tbm" value="isch" type="hidden">
                         <div style="margin-top: 14px;">
