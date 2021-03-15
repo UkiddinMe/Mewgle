@@ -24,6 +24,8 @@
                 border-top-right-radius: 24px;
                 height: 32px;
                 width: 482px;
+                font-size: 16px;
+                padding-inline-start: 15px;
             } input.inser:hover {
                 background-color: #fff;
                 box-shadow: 0 4px 6px rgba(32, 33, 36, .28);
@@ -32,7 +34,8 @@
             } a.navlink:hover {
                 text-decoration: underline;
             } form.cenform {
-                text-align: center; margin-top: 300px;
+                text-align: center;
+                margin-top: 300px;
             } #myVideo {
                 position:fixed;
                 left: 0px;
@@ -56,6 +59,24 @@
                 object-position:center bottom;
                 width:auto;
                 margin-bottom: 14px;
+            } .button {
+                background-color: #f8f9fa;
+                border: 1px solid #f8f9fa;
+                border-radius: 4px;
+                color: #3c4043;
+                font-family: arial,sans-serif;
+                font-size: 14px;
+                margin: 11px 4px;
+                padding: 0 16px;
+                line-height: 27px;
+                height: 36px;
+                min-width: 54px;
+                text-align: center;
+                cursor: pointer;
+                user-select: none;
+            } .button:hover {
+                background-color: #fff;
+                box-shadow: 0 4px 6px rgba(32, 33, 36, .28);
             }
         </style>
     </head>
@@ -76,8 +97,8 @@
                     </div>
                     <div style="margin-top: 14px;">
                         <center>
-                            <input type="submit" value="Cerca con Mewgle">
-                            <input class="RNmpXc" value="Mi sento fortunato" aria-label="Mi sento fortunato" name="btnI" type="submit" jsaction="sf.lck" data-ved="0ahUKEwj8iaC8q7LuAhViBWMBHYnpCtkQ19QECA4">
+                            <input class="button" type="submit" value="Cerca con Mewgle">
+                            <input class="button" value="Mi sento fortunato" aria-label="Mi sento fortunato" name="btnI" type="submit" jsaction="sf.lck" data-ved="0ahUKEwj8iaC8q7LuAhViBWMBHYnpCtkQ19QECA4">
                         </center>
                     </div>
                 </form>
@@ -95,7 +116,7 @@
                         <input name="tbm" value="isch" type="hidden">
                         <div style="margin-top: 14px;">
                             <center>
-                                <input type="submit" value="Image Search">
+                                <input class="button" type="submit" value="Image Search">
                             </center>
                         </div>
                     </div>
